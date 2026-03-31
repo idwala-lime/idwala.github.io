@@ -12,7 +12,7 @@
       padding: 0;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       background-color: #f8f9fa;
       color: #2c3e50;
       line-height: 1.7;
@@ -21,142 +21,92 @@
     }
 
     header {
-      background: linear-gradient(rgba(0,0,60,0.75), rgba(0,0,60,0.75)), url('hero.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,50,0.75), rgba(0,0,50,0.75)), url('hero.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 90px 20px 60px;
-      background-attachment: scroll;
+      padding: 110px 20px 80px;
     }
 
     header h1 {
-      font-size: 3.3rem;
-      margin-bottom: 12px;
+      font-size: 3.5rem;
+      margin-bottom: 14px;
       font-weight: 700;
     }
 
     header p {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       max-width: 900px;
       margin: 0 auto;
       opacity: 0.95;
     }
 
     .container {
-      max-width: 2200px;
+      max-width: 1550px;
       margin: 0 auto;
-      padding: 0 40px 80px;
+      padding: 0 35px 80px;
       flex: 1;
     }
 
     .columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;   /* forces equal width columns */
-  gap: 50px;                        /* space between them */
-  margin-top: 50px;
-  margin-bottom: 60px;
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 70px;
+      margin-top: 40px;
+    }
 
-.column {
-  width: 100%;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-  padding: 60px 70px;               /* slightly wider inside */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-    .column:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 50px rgba(0,0,0,0.14);
+    .column {
+      flex: 1 1 620px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+      padding: 60px 55px;
     }
 
     .column h2 {
       color: #003366;
-      font-size: 2.5rem;
-      margin-bottom: 32px;
-      border-bottom: 4px solid #e8f0fe;
-      padding-bottom: 12px;
+      font-size: 2.6rem;
+      margin-bottom: 35px;
+      border-bottom: 4px solid #edf3ff;
+      padding-bottom: 14px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+    ul { list-style: none; padding: 0; margin: 0; }
 
     li {
-      margin: 24px 0;
-      padding: 22px 30px;
-      background: #f9fbff;
+      margin: 26px 0;
+      padding: 24px 30px;
+      background: #f8fbff;
       border-radius: 12px;
-      border-left: 6px solid #0066cc;
-      transition: all 0.2s ease;
-    }
-
-    li:hover {
-      background: #eef4ff;
-      transform: translateX(6px);
+      border-left: 7px solid #0066cc;
     }
 
     li a {
-      color: #004080;
+      color: #003366;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.32rem;
+      font-size: 1.35rem;
       display: block;
-    }
-
-    li a:hover {
-      color: #0077e6;
     }
 
     footer {
       background: #002244;
       color: #d0e0ff;
       text-align: center;
-      padding: 50px 20px;
-      font-size: 1.05rem;
+      padding: 45px 20px;
       margin-top: auto;
     }
 
-    footer a {
-      color: #66aaff;
-      text-decoration: none;
-    }
+    footer a { color: #77bbff; text-decoration: none; }
 
-    /* Desktop – side by side */
+    /* Desktop side-by-side */
     @media (min-width: 980px) {
-      header { padding: 110px 40px 70px; }
-      header h1 { font-size: 4.1rem; }
-      header p { font-size: 1.55rem; }
-      .columns { 
-        margin-top: 50px; 
-        gap: 70px; 
-      }
-      .column { 
-        flex: 1; 
-        padding: 60px 65px; 
-      }
+      .columns { gap: 80px; margin-top: 50px; }
+      .column { padding: 65px 60px; }
     }
 
-    /* Mobile / tablet – stack vertically */
+    /* Mobile stack */
     @media (max-width: 979px) {
-  .columns {
-    grid-template-columns: 1fr;  /* stack on mobile */
-    gap: 50px;
-    margin-top: 35px;
-  }
-}
-      .column { padding: 50px 45px; }
-    }
-
-    @media (max-width: 480px) {
-      header { padding: 80px 15px 50px; }
-      header h1 { font-size: 2.7rem; }
-      header p { font-size: 1.2rem; }
-      .columns { margin-top: 30px; gap: 45px; }
-      .column { padding: 45px 35px; }
-      li a { font-size: 1.25rem; }
+      .columns { flex-direction: column; gap: 50px; margin-top: 40px; }
     }
   </style>
 </head>
@@ -173,7 +123,6 @@
         <h2>Newsletters</h2>
         <ul>
           <li><a href="newsletter/IDWALA.pdf" target="_blank">March 2026 Newsletter (PDF)</a></li>
-          <!-- Add more -->
         </ul>
       </div>
 
@@ -181,7 +130,6 @@
         <h2>Job Listings</h2>
         <ul>
           <li><a href="jobs/Vacancy - Contracts Manager 2026.pdf" target="_blank">Contracts Manager (PG8)</a></li>
-          <!-- Add more -->
         </ul>
       </div>
     </div>
